@@ -1,2 +1,2 @@
-# goit-markup-hw-01
-Первое домашнее задание по html+css 
+# goit-markup-hw-02
+Второе домашнее задание по html+css 

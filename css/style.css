@@ -39,22 +39,24 @@ body {
 	color: var(--logo-secondary-color);
 }
 
-.link.header {
+.header.nav,
+.header.mail,
+.header.phone {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 }
-.link.header.nav {
+.link.header:focus,
+.link.header:hover {
+	color: var(--supporting-color);
+}
+.header.nav {
 	color: inherit;
 }
-.link.header.nav.selected {
-	color: var(--supporting-color);
-}
-.link.header.mail {
-	color: var(--supporting-color);
-}
-.link.header.phone {
+
+.header.mail,
+.header.phone {
 	color: var(--secondary-text-color);
 }
 
@@ -154,6 +156,13 @@ body {
 	color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-mail:hover,
+.footer-mail:focus,
+.footer-phone:hover,
+.footer-phone:focus {
+	color: var(--supporting-color);
+}
+
 /* portfolio */
 
 .filter-button {
@@ -166,7 +175,8 @@ body {
 	cursor: pointer;
 	background-color: var(--secondary-bg-color);
 }
-.filter-button.selected {
+.filter-button:hover,
+.filter-button:focus {
 	color: var(--third-text-color);
 	background-color: var(--supporting-color);
 }
@@ -183,4 +193,9 @@ body {
 	line-height: 1.87;
 	letter-spacing: 0.03em;
 	color: var(--secondary-text-color);
+}
+
+.our-works:hover,
+.our-works:focus {
+	background-color: var(--supporting-color);
 }

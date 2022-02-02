@@ -76,7 +76,8 @@ body {
 }
 .hero .button {
 	color: var(--third-text-color);
-	font-weight: bold;
+	font-weight: 700;
+	font-family: inherit;
 	font-size: 16px;
 	line-height: 1.87;
 	cursor: pointer;
@@ -88,7 +89,6 @@ body {
 /* section peculiarities */
 
 .peculiarities .header {
-	font-weight: bold;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.03em;
@@ -104,7 +104,6 @@ body {
 /* section whatWeDo */
 
 .whatWeDo .header {
-	font-weight: bold;
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
@@ -116,7 +115,6 @@ body {
 	background-color: var(--secondary-bg-color);
 }
 .ourTeam-header {
-	font-weight: bold;
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
@@ -166,6 +164,7 @@ body {
 /* portfolio */
 
 .filter-button {
+	font-family: inherit;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.62;

@@ -318,7 +318,12 @@ header {
 	color: var(--secondary-text-color);
 }
 
-.our-works:hover,
+/* .our-works:hover,
 .our-works:focus {
+	background-color: var(--supporting-color);
+} */
+.title-container:hover,
+.title-container:focus {
+	border-color: var(--supporting-color);
 	background-color: var(--supporting-color);
 }

@@ -80,26 +80,24 @@ header {
 }
 
 .icon-mail {
-	display: block; 
 	width: 16px;
 	height: 12px;
 	fill: currentColor;
- 	margin: auto 10px auto 0px; 
+ 	margin-right: 10px; 
 }
 
-.icon-phone {
-	display: block; 
+.icon-phone { 
 	width: 10px;
 	height: 16px;
 	fill: currentColor;
- 	margin: auto 10px auto 0px; 
+	margin-right: 10px;
 }
 
 .header.mail,
 .header.phone {
 	display: flex;
 	color: var(--secondary-text-color);
-	text-align: center;
+	align-items: center;
 }
 
 
@@ -280,7 +278,9 @@ header {
 }
 
 .socialnetworks-our-team-element {
-	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
@@ -289,7 +289,7 @@ header {
 	cursor: pointer;
 }
 .socialnetworks-logo {
-	margin: auto auto;
+	/* margin: auto auto; */
 	width: 20px;
 	height: 20px;
 	fill:currentColor;
@@ -409,9 +409,14 @@ header {
 	justify-content: space-between;
 	height: 44px;
 	gap: 10px;
+	align-items: center;
+	justify-content: center;
 
 }
 .ours-socialnetworks-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;

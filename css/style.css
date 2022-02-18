@@ -236,7 +236,6 @@ header {
 .hero .backdrop.is-hidden .modal{
 	transform: scale(.2); 
 	opacity: 0;
-	transition: opacity 1250ms cubic-bezier(var(--cubic-value)), transform 1250ms cubic-bezier(var(--cubic-value));
 }
 .icon-close-btn {
 	

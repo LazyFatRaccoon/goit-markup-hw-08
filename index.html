@@ -23,7 +23,7 @@
             </a>
             <nav>
                 <ul class="list nav-container">
-                    <li> <a href="./index.html" class="link header nav"> Студия </a> </li>
+                    <li> <a href="./index.html" class="link header nav selected"> Студия </a> </li>
                     <li> 
                         <a href="./portfolio.html" class="link header nav"> 
                             
@@ -45,12 +45,20 @@
                     <p>+38 096 111 11 11</p></a></li>
             </ul>
         </div>
-
     </header>
     <main>
         <section class="hero">
             <h1 class="hero-header">ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-            <button class="button">Заказать услугу</button>
+            <button class="button" data-modal-open>Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal" >
+                    <button class="modal-close-btn" data-modal-close>
+                        <svg class="icon-close-btn">
+                            <use href="./images/symbol-defs.svg#icon-closeBtn"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </section>
         <section class="peculiarities section">
             <h2 hidden>Наши особенности</h2>
@@ -100,9 +108,21 @@
         <section class="what-we-do section">
             <h2 class="header">Чем мы занимаемся</h2>
             <ul class="list container">
-                <li> <img src='./images/image1.jpg' alt="процесс кодинга" width="370"></li>
-                <li> <img src='./images/image2.jpg' alt="разработка макета" width="370"></li>
-                <li> <img src='./images/image3.jpg' alt="выбор цветовой палитры" width="370"></li>
+                <li> <img src='./images/image1.jpg' alt="процесс кодинга" width="370">
+                    <div class="label-wrapper">
+                        <p class="label">Десктопные приложения</p>
+                    </div>
+                </li>
+                <li> <img src='./images/image2.jpg' alt="разработка макета" width="370">
+                    <div class="label-wrapper">
+                        <p class="label">Мобильные приложения</p>
+                    </div>
+                </li>
+                <li> <img src='./images/image3.jpg' alt="выбор цветовой палитры" width="370">
+                    <div class="label-wrapper">
+                        <p class="label">Дизайнерские решения</p>
+                    </div>
+                </li>
             </ul>
         </section>
         <section class="our-team section">
@@ -360,7 +380,7 @@
         </div>
 
     </footer>
-    <script src="main.js"></script>
+    <script src="./modal.js"></script>
 </body>
 
 </html>

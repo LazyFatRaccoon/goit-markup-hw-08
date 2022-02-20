@@ -652,3 +652,7 @@ header {
 .our-works:hover .overlay {
 	transform: translateY(0);
 }
+
+.our-works-link:focus .overlay{
+	transform: translateY(0);
+}

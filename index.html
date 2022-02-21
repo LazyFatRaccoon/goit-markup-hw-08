@@ -54,14 +54,60 @@
                 <div class="modal" >
                     <button class="modal-close-btn" data-modal-close>
                         <svg class="icon-close-btn">
-                            <use href="./images/symbol-defs.svg#icon-closeBtn"></use>
+                            <use href="./images/symbol-defs.svg#close-black"></use>
                         </svg>
                     </button>
+                    <form>
+                    <h2 class="modal-header">Оставьте свои данные, мы вам перезвоним</h2>
+
+                    <label class="field">
+                        <p class="modal-label">Имя</p>
+                        <div class="input-container">
+                            <input class="input" type="text" name="name">  
+                            <svg class="icon">
+                                <use href="./images/symbol-defs.svg#person-black"></use>
+                            </svg>
+                        </div>
+                    </label>
+                    <label class="field">
+                        <p class="modal-label">Телефон</p>
+                        <div class="input-container">
+                            <input class="input" type="tel" name="tel">  
+                            <svg class="icon">
+                                <use href="./images/symbol-defs.svg#phone-black"></use>
+                            </svg>
+                        </div>
+                    </label>
+                    <label class="field">
+                        <p class="modal-label">Почта</p>
+                        <div class="input-container">
+                            <input class="input" type="email" name="mail">  
+                            <svg class="icon">
+                                <use href="./images/symbol-defs.svg#email-black"></use>
+                            </svg>
+                        </div>
+                    </label>
+                    <label class="comment">
+                        <p class="modal-label">Комментарий</p>
+                        <textarea name="comment" placeholder="Введите текст"></textarea>
+                    </label>
+                    <label class="checkbox">
+                        
+                        <input class="visually-hidden" type="checkbox" name="policy"></input>
+                        <svg class="checkbox-img">
+                            <use href="./images/symbol-defs.svg#icon_checked"></use>
+                        </svg>
+    
+                        <span>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
+                    
+                    </label>
+                    <button class="button" type="submit">Отправить</button>
+                    </form>
                 </div>
             </div>
         </section>
         <section class="peculiarities section">
-            <h2 hidden>Наши особенности</h2>
+            <h2 class="visually-hidden">Наши особенности</h2>
             <ul class="list container">
                 <li>
                     <div class="peculiarities-logo-container">
@@ -375,6 +421,19 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="subscribe-field">
+                <p>Подпишитесь на рассылку</p>
+                <form>
+                    <input type="email" name="mail" placeholder="E-mail">
+                    <button class="button" type="submit">Подписаться
+                        <svg class="subscribe-field-button-logo">
+                            <use href="./images/symbol-defs.svg#discribe"></use>
+                        </svg>
+                        <!-- <span></span> -->
+                    </button>
+                </form>
+
             </div>
 
         </div>

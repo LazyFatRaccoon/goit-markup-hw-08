@@ -1,0 +1,46 @@
+
+.contacts {
+    display: flex;
+	margin-left: 92px;
+    gap: 50px;
+    margin-left: auto;
+    
+    &__element {
+        display: flex;
+        align-items: center;
+	    color: var(--secondary-text-color);
+        padding: 32px 0px;
+        font-weight: 500;
+	    letter-spacing: 0.02em;
+	    transition: color var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1), fill var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus,
+        &:hover {
+            color: var(--supporting-color);
+	        cursor: pointer;
+	        fill: currentColor;
+        }
+    }
+
+    &__mail {
+        width: 16px;
+	    height: 12px;
+        fill: currentColor;
+ 	    margin-right: 10px;
+    }
+    &__tel {
+        width: 10px;
+	    height: 16px;
+        fill: currentColor;
+ 	    margin-right: 10px;
+    }
+
+        
+        
+        
+        
+            
+}
+
+
+

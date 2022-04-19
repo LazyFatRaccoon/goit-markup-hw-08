@@ -1,0 +1,31 @@
+.skill-card {
+	flex-basis: calc((100% - 3 * 30px) / 4);
+
+	&__logo-container {
+		display: flex;
+		height: 120px;
+		background-color: var(--secondary-bg-color);
+		border-radius: 4px;
+		margin-bottom: 30px;
+		justify-content: center;
+		align-items: center;
+	
+		&__logo {
+			width: 70px;
+			height: 70px;
+		}
+	}
+	&__header {
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	&__paragraph {
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.03em;
+		color: var(--secondary-text-color);
+	}
+}

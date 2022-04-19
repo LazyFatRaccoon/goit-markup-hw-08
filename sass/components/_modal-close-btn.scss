@@ -1,0 +1,27 @@
+.modal-close-btn {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	right: 8px;
+	top: 8px;
+
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	border: 1px solid #0000001A;
+
+	background-color: var(--main-bg-color);
+
+	&__icon {
+		transition: fill var(--animation-time) cubic-bezier(var(--cubic-value));
+		width: 30px;
+		height: 30px;
+
+		&:hover {
+			fill: var(--supporting-color);
+			cursor: pointer;
+		}
+	}
+}

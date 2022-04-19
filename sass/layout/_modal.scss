@@ -1,0 +1,129 @@
+.modal-header {
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+.label {
+	display: block;
+	margin-bottom: 10px;
+
+	&__text {
+		margin-bottom: 4px;
+		color: var(--secondary-text-color);
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 1%;
+	}
+}
+
+.input {
+	position: relative;
+	&__field {
+		padding: 12px 42px;
+		width: 100%;
+		height: 40px;
+		border: 1px solid rgba(33, 33, 33, 0.2);
+		border-radius: 4px;
+		transition: border-color var(--animation-time) cubic-bezier(var(--cubic-value));
+
+		&:focus,
+		&:hover{
+			outline: none;
+			border-color: var(--supporting-color);
+		}		
+
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 12px;
+		transform: translateY(-50%);
+		pointer-events: none;
+
+		width: 18px;
+		height: 18px;
+
+		transition: fill var(--animation-time) cubic-bezier(var(--cubic-value));
+
+		 .input__field:focus + &,
+		 .input__field:hover + &{
+		 	fill: var(--supporting-color);
+		 }
+	}
+}
+
+.textarea {
+	resize: none;
+	padding: 12px 16px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	width: 100%;
+	height: 120px;
+	transition: border-color var(--animation-time) cubic-bezier(var(--cubic-value));
+
+	&::placeholder {
+		color: #75757550;
+		font-size: 14px;
+		line-height: 1.17;
+		letter-spacing: 1%;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: var(--supporting-color);
+		outline: none;
+	}
+
+}
+
+
+
+.checkbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+
+	color: var(--secondary-text-color);
+
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 3%;
+	color: var(--secondary-text-color);
+
+	&__input {
+		position: absolute;
+
+		&:focus + .checkbox__img {
+			outline: 1px solid var(--supporting-color);
+		}
+		&:checked + .checkbox__img {
+			border-color: var(--supporting-color);
+			fill: var(--supporting-color);
+			border: 0px solid var(--main-text-color);
+			/* background-image: url(../images/icon_checked.svg); */
+			outline-color: transparent;
+		}
+		
+	}
+
+	&__img {
+		box-sizing: border-box;
+		width: 16px;
+		height: 15px;
+		fill:transparent;
+
+		margin-right: 8px;
+		border: 2px solid var(--main-text-color);
+		border-radius: 2px;
+	}
+	&__link {
+		color: var(--supporting-color);
+		text-decoration:underline;
+		cursor: pointer;
+
+		
+	}
+
+}

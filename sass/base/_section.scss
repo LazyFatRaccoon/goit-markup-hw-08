@@ -1,0 +1,54 @@
+.section {
+	padding: 94px 0px;
+
+    &__name {
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-bottom: 50px;
+    }
+
+    &__header {
+        color: var(--third-text-color);
+	    font-weight: 900;
+	    font-size: 44px;
+	    line-height: 1.36;
+	    text-align: center;
+	    letter-spacing: 0.06em;
+	    text-transform: uppercase;
+	    margin-bottom: 30px;
+    }
+
+    &--gray-background {
+        background-color: var(--secondary-bg-color);
+    }
+
+    &--darkgray-background {
+        background-color: var(--third-bg-color);
+    }
+
+    &--hero-background-img {
+        background-size: cover;
+        background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url('../images/bghero.jpg') ;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--without-padding-bottom {
+        padding-bottom: 0px;
+    }
+
+    &--footer-paddings {
+        padding: 60px 0;
+    }
+
+    &--hero-paddings {
+        padding: 200px 0px;
+    }
+
+    
+
+
+
+}

@@ -125,7 +125,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .section--hero-background-img {
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero_desktop_x1.jpg");
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./images/hero/hero_desktop_x1.jpg");
     height: 600px;
     background-position: center;
     background-size: cover;
@@ -134,7 +134,7 @@ img {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .section--hero-background-img {
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero_tablet_x1.jpg");
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_tablet_x1.jpg");
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -143,7 +143,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .section--hero-background-img {
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero_mobile_x1.jpg");
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero_mobile_x1.jpg");
     height: 400px;
     background-position: center;
     background-size: cover;

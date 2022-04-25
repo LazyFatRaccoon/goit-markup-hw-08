@@ -1,15 +1,38 @@
 
 .contacts {
-    display: flex;
-	margin-left: 92px;
-    gap: 50px;
-    margin-left: auto;
+    //display: flex;
+	//margin-left: 92px;
+    //@debug: 50px;
+    //margin-left: auto;
+    margin: auto 0 32px 0;
+    //align-self: flex-start;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 10px;
+        margin: 0;
+    }
+    @media screen and (min-width: 1200px) {
+        flex-direction:row-reverse;
+        gap: 30px;
+    }
+    li {
+        margin-bottom: 32px;
+        @media screen and (min-width: 768px) {
+            margin: 0;
+        }
+    }
     
     &__element {
-        display: flex;
-        align-items: center;
+        
+        //display: flex;
+        //align-items: center;
 	    color: var(--secondary-text-color);
-        padding: 32px 0px;
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+        }
+        
         font-weight: 500;
 	    letter-spacing: 0.02em;
 	    transition: color var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1), fill var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
@@ -20,19 +43,61 @@
 	        cursor: pointer;
 	        fill: currentColor;
         }
+        &--mobile-telephone {
+            font-size: 34px;
+            line-height: 1.18;
+            letter-spacing: 2%;
+            color: var(--supporting-color);
+
+            
+
+        }
+        &--mobile-email {
+            font-size: 24px;
+            line-height: 1.17;
+            letter-spacing: 2%;
+            color: var(--secondary-text-color);
+
+        }
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+           align-items:center;
+            //gap: 8px;
+           // margin: 0;
+        }
     }
 
     &__mail {
-        width: 16px;
-	    height: 12px;
+
+        display: none;
+        width: 14px;
+	    height: 10px;
         fill: currentColor;
  	    margin-right: 10px;
+         @media screen and (min-width: 768px) {
+            display: block;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 16px;
+	        height: 12px;
+        }
+        
+
     }
     &__tel {
+        display: none;
         width: 10px;
-	    height: 16px;
+	    height: 14px;
         fill: currentColor;
  	    margin-right: 10px;
+         @media screen and (min-width: 768px) {
+            display: block;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 10px;
+	        height: 16px;
+        }
     }
 
         

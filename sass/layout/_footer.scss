@@ -1,6 +1,32 @@
+.footer {
+	padding: 60px 15px;
+	text-align: center;
+	margin: 0 auto;
+	
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		padding: 60px calc((100% - 1200px) * 0.5 + 15px );
+		align-items:baseline;
+	}
+
+	
+}
+
 .address {
 	flex-flow: column;
 	align-items: flex-start;
+
+	@media screen and (min-width: 768px) {
+		display: inline-block;
+		margin-right: calc(165px + (100% - 768px) * 0.5);
+	}
+	@media screen and (min-width: 1200px) {
+		//display: flex;
+		margin-right: 70px;
+		text-align: left;
+	}
+
 
 	&__text {
 		font-style: normal;
@@ -14,7 +40,7 @@
 		display: inline-block;
 		color: rgba(255, 255, 255, 0.6);
 		transition: color var(--animation-time) cubic-bezier(var(--cubic-value));
-		margin-top: 9px;
+		margin-top: 8px;
 		cursor: pointer;
 
 		&:hover,
@@ -25,16 +51,36 @@
 }
 
 .footer-block {
-	margin-top: 12px;
+	margin-top: 60px;
 	&--socialnetworks {
-		margin-left: 70px;
+		@media screen and (min-width: 768px) {
+			display: inline-block;
+			position: relative;
+			top: -60px;
+			
+		}
+		@media screen and (min-width: 1200px) {
+			//padding-bottom: 18px;
+			top: 0px;
+			
+		}
+		
+		//margin-left: 70px;
 	}
 	&--subscribe {
-		width: 570px;
-		height: 86px;
-		margin-left: auto;
+		@media screen and (min-width: 1200px) {
+			//padding-bottom: 12px;
+			margin-top: 0;
+			margin-left: auto;
+		}
+		//width: 570px;
+		//height: 86px;
+		//margin-left: auto;
 	}
 	&__header {
+
+
+		text-align: center;
 		color: var(--main-bg-color);
 		text-transform: uppercase;
 		font-size: 14px;
@@ -42,17 +88,32 @@
 		padding-bottom: 20px;
 		font-weight: 700;
 		letter-spacing: 0.03em;
+		@media screen and (min-width: 1200px) {
+			text-align: left;
+		}
 
 	}
+	
 }
 
 
 .subscribe-form{
 	display: flex;
+	
+	flex-direction: column;
+	align-items:center;
+	@media screen and (min-width: 1200px) {
+		flex-direction: row;
+		gap: 12px;
+	}
 	&__input {
+		
 		width: 100%;
-		height: 50px;
-		margin-right: 12px;
+		@media screen and (min-width:480px) {
+			width: 450px;
+		}
+		//height: 50px;
+		margin-bottom: 20px;
 		background-color: transparent;
 		box-shadow: 0px, 4px, 4px, rgba(0,0,0,.15);
 		border-radius: 4px;
@@ -65,6 +126,13 @@
 			letter-spacing: 3%;
 			color:  #FFFFFF99;
 
+		}
+		@media screen and (min-width: 1200px){
+			margin-bottom: 0;
+			width: 358px;
+		}
+		+ .button {
+			min-width: 200px;
 		}
 	}
 

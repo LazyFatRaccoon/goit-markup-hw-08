@@ -1,23 +1,39 @@
 .section {
-	padding: 94px 0px;
+	padding: 60px 15px;
+    
+    @media screen and (min-width:1200px) {
+        padding: 94px calc((100% - 1200px) * 0.5 + 15px );
+        
+    }
 
     &__name {
-        font-size: 36px;
         line-height: 1.17;
         text-align: center;
         letter-spacing: 0.03em;
-        margin-bottom: 50px;
+        font-size: 28px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width:1200px) {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        
     }
 
     &__header {
         color: var(--third-text-color);
 	    font-weight: 900;
-	    font-size: 44px;
-	    line-height: 1.36;
+	   
+        font-size: 26px;
+        line-height: 1.615;
 	    text-align: center;
 	    letter-spacing: 0.06em;
 	    text-transform: uppercase;
 	    margin-bottom: 30px;
+        @media screen and (min-width:1200px) {
+            font-size: 44px;
+	        line-height: 1.36;
+        }
     }
 
     &--gray-background {
@@ -29,22 +45,102 @@
     }
 
     &--hero-background-img {
-        background-size: cover;
-        background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url('../images/bghero.jpg') ;
-        background-repeat: no-repeat;
-        background-position: center;
+        //background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url('../images/bghero-mobile.jpg') ;
+        // background-position: center;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        
+        
+            @media screen and (min-width:1200px) {
+                background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../../images/hero/hero_desktop_x1.jpg');
+                height: 600px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                
+        
+            }
+        
+            @media screen and (min-width:768px) and (max-width:1199px) {
+                background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../../images/hero/hero_tablet_x1.jpg');
+                height: 400px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        
+            @media screen and (max-width:767px) {
+                background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../../images/hero/hero_mobile_x1.jpg');
+                height: 400px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+        
+            }
+        
+        
+        
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution:2dppx) {
+            @media screen and (min-width:1200px) {
+                background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../../images/hero/hero_desktop_x2.jpg');
+                height: 600px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        
+            @media screen and (min-width:768px) and (max-width:1199px) {
+                background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../../images/hero/hero_tablet_x2.jpg');
+                height: 400px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        
+            @media screen and (max-width:767px) {
+                background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../../images/hero/hero_mobile_x2.jpg');
+                height: 400px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        
+        
+        
+
+        
     }
 
     &--without-padding-bottom {
         padding-bottom: 0px;
     }
 
-    &--footer-paddings {
-        padding: 60px 0;
+    
+
+   &--hero-paddings {
+    display: flex;
+     }
+
+    &--with-list  {
+        padding-bottom: 60; 
+        @media screen and (min-width:768px) {
+            padding-bottom: 60px;
+        } 
+        @media screen and (min-width:1200px) {
+            padding-bottom: 0;
+        } 
     }
 
-    &--hero-paddings {
-        padding: 200px 0px;
+    &--what-we-do {
+        display:none;
+        @media screen and (min-width:1200px) {
+            display: block;
+            
+        }
     }
 
     

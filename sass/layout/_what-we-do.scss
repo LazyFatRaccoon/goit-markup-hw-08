@@ -1,3 +1,8 @@
+.image-card-container {
+	display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+}
 .image-card {
 	position: relative;
 
@@ -14,6 +19,10 @@
 		
 		&__label {
 			position: absolute;
+			
+			font-size: 14px;
+			letter-spacing: 3%;
+			line-height: 1.17;
 			font-weight: 700;
 			text-transform: uppercase;
 			color: var(--third-text-color);

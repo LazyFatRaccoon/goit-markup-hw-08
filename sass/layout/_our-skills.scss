@@ -1,5 +1,27 @@
+.skill-card-container {
+	margin: -15px;
+	display: flex;
+	flex-wrap: wrap;
+
+}
 .skill-card {
-	flex-basis: calc((100% - 3 * 30px) / 4);
+	//
+	margin: 15px;
+	width: calc(100% - 30px);
+	@media screen and (min-width:768px) {
+		
+		width: calc((100% - 2 * 30px) / 2);
+	}
+	@media screen and (min-width:1200px) {
+		width: calc((100% - 4 * 30px) / 4);
+		
+	}
+
+
+    
+
+    
+
 
 	&__logo-container {
 		display: flex;
@@ -7,6 +29,7 @@
 		background-color: var(--secondary-bg-color);
 		border-radius: 4px;
 		margin-bottom: 30px;
+
 		justify-content: center;
 		align-items: center;
 	
@@ -16,6 +39,10 @@
 		}
 	}
 	&__header {
+		text-align: center;
+		@media screen and (min-width:768px) {
+			text-align: left;
+		}
 		font-size: 14px;
 		line-height: 1.14;
 		letter-spacing: 0.03em;

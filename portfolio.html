@@ -18,10 +18,24 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <a lang="en" href="./index.html" class="logo">
-                <span class="logo__first-part">Web</span><span class="logo__second-part">Studio</span>
-            </a>
+        
+        <!-- <div class="container"> -->
+           
+                <a lang="en" href="./index.html" class="logo">
+                    <span class="logo__first-part">Web</span><span class="logo__second-part">Studio</span>
+                </a>
+                <button class="menu-button menu-button__open" type="button" data-menu-open>
+                    <svg width="40" height="40">
+                        <use class="menu-button__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            <div class="navigation-container" data-menu>
+                <button class="menu-button menu-button__close" type="button" data-menu-close>
+                    <svg width="40" height="40">
+                        <use class="menu-button__icon-menu-close" href="./images/symbol-defs.svg#icon-menu-close"></use>
+                    </svg>
+                </button>
+            
             <nav>
                 <ul class="navigation">
                     <li> <a href="./index.html" class="navigation__element"> Студия </a> </li>
@@ -30,18 +44,30 @@
                 </ul>
             </nav>
             <ul class="contacts">
-                <li><a href="mailto:info@devstudio.com" class="contacts__element">
-                    <svg class="contacts__mail">
-                        <use href="./images/symbol-defs.svg#icon-mail"></use>
-                    </svg>
-                    <p>info@devstudio.com</p></a></li>
-                <li><a href="tel:+380961111111" class="contacts__element">
+                <li><a href="tel:+380961111111" class="contacts__element" data-menu-telephone>
                     <svg class="contacts__tel">
                         <use href="./images/symbol-defs.svg#icon-phone"></use>
                     </svg>
-                    <p>+38 096 111 11 11</p></a></li>
+                    <p>+38 096 111 11 11</p>
+                </a></li>
+                <li><a href="mailto:info@devstudio.com" class="contacts__element" data-menu-email>
+                        <svg class="contacts__mail">
+                            <use href="./images/symbol-defs.svg#icon-mail"></use>
+                        </svg>
+                        <p>info@devstudio.com</p>
+                    </a></li>
+                
             </ul>
-        </div>
+            <ul class="mobile-menu__social">
+                <li> <a href="#" class="mobile-menu__social__element">Instagram</a> </li>
+                <li> <a href="#" class="mobile-menu__social__element">Twitter</a> </li>
+                <li> <a href="#" class="mobile-menu__social__element">Facebook</a> </li>
+                <li> <a href="#" class="mobile-menu__social__element">LinkedIn</a> </li>
+            </ul>
+            </div>
+                
+          
+        <!-- </div> -->
     </header>
     <main>
         <section class="section">
@@ -65,8 +91,8 @@
 
             <h1 hidden>Наши работы</h1>
 
-            <ul class="container">
-                <li class="container__element">
+            <ul class="portfolio">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -76,8 +102,15 @@
                                     частном лице.
                                 </p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image1.jpg" alt="Ноутбук с открытым сайтом Технокряк"
-                                width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_1/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_1/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_1/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_1/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_1/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_1/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_1/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_1/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_1/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_1/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_1/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_1/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_1/portfolio_mobile_x2.jpg' alt="Ноутбук с открытым сайтом Технокряк"  />
+                            </picture>
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name">Технокряк</h2>
@@ -85,7 +118,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -95,8 +128,16 @@
                                     частном лице.
                                 </p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image2.jpg" alt="Постер с двумя баскетболистами"
-                                width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_2/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_2/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_2/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_2/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_2/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_2/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_2/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_2/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_2/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_2/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_2/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_2/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_2/portfolio_mobile_x2.jpg' alt="Постер с двумя баскетболистами"  />
+                            </picture>
+                            
 
                         </div>
                         <div class="portfolio-card__text">
@@ -105,7 +146,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -113,7 +154,16 @@
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image3.jpg" alt="Логотип ресторана Seafood" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_3/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_3/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_3/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_3/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_3/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_3/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_3/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_3/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_3/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_3/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_3/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_3/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_3/portfolio_mobile_x2.jpg' alt="Логотип ресторана Seafood"  />
+                            </picture>
+                            
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name">Ресторан Seafood</h2>
@@ -121,7 +171,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -129,7 +179,16 @@
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image4.jpg" alt="Наушники" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_4/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_4/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_4/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_4/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_4/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_4/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_4/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_4/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_4/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_4/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_4/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_4/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_4/portfolio_mobile_x2.jpg' alt="Наушники"  />
+                            </picture>
+                            
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name">Проект Prime</h2>
@@ -137,7 +196,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -145,7 +204,16 @@
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image5.jpg" alt="Две коробки" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_5/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_5/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_5/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_5/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_5/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_5/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_5/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_5/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_5/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_5/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_5/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_5/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_5/portfolio_mobile_x2.jpg' alt="Две коробки"  />
+                            </picture>
+                         
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name">Проект Boxes</h2>
@@ -153,7 +221,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -161,7 +229,16 @@
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image6.jpg" alt="Монитор с открытым сайтом" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_6/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_6/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_6/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_6/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_6/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_6/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_6/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_6/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_6/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_6/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_6/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_6/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_6/portfolio_mobile_x2.jpg' alt="Монитор с открытым сайтом"  />
+                            </picture>
+                            
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name" lang="en">Inspiration has no Borders</h2>
@@ -169,7 +246,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -177,8 +254,16 @@
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image7.jpg"
-                                alt="Открытая книга с креативными фотографиями" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_7/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_7/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_7/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_7/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_7/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_7/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_7/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_7/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_7/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_7/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_7/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_7/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_7/portfolio_mobile_x2.jpg' alt="Открытая книга с креативными фотографиями"  />
+                            </picture>
+                            
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name">Издание Limited Edition</h2>
@@ -186,7 +271,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -194,7 +279,16 @@
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image8.jpg" alt="Ярлык с названием проекта" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_8/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_8/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_8/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_8/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_8/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_8/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_8/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_8/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_8/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_8/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_8/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_8/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_8/portfolio_mobile_x2.jpg' alt="Ярлык с названием проекта"  />
+                            </picture>
+                            
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name">Проект LAB</h2>
@@ -202,7 +296,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="container__element">
+                <li class="portfolio__element">
                     <a class="portfolio-card" href="">
                         <div class="portfolio-card__img-container">
                             <div class="overlay">
@@ -210,8 +304,16 @@
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</p>
                             </div>
-                            <img class="portfolio-card__img-container__img" src="./images/portfolio-images/image9.jpg"
-                                alt="ноутбук с открытым приложением на экране" width="370">
+                            <picture>
+                                <source srcset="./images/portfolio/card_9/portfolio_desktop_x1.webp 1x, ./images/portfolio/card_9/portfolio_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_9/portfolio_desktop_x1.jpg 1x, ./images/portfolio/card_9/portfolio_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/portfolio/card_9/portfolio_tablet_x1.webp 1x, ./images/portfolio/card_9/portfolio_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_9/portfolio_tablet_x1.jpg 1x, ./images/portfolio/card_9/portfolio_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                                <source srcset="./images/portfolio/card_9/portfolio_mobile_x1.webp 1x, ./images/portfolio/card_9/portfolio_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                                <source srcset="./images/portfolio/card_9/portfolio_mobile_x1.jpg 1x, ./images/portfolio/card_9/portfolio_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                                <img class="portfolio-card__img-container__img" src='./images/portfolio/card_9/portfolio_mobile_x2.jpg' alt="ноутбук с открытым приложением на экране"  />
+                            </picture>
+                            
                         </div>
                         <div class="portfolio-card__text">
                             <h2 class="portfolio-card__text__name" lang="en">Growing Business</h2>
@@ -222,69 +324,69 @@
             </ul>
         </section>
     </main>
-    <footer class="section--darkgray-background section--footer-paddings">
-        <div class="container container--align-items-flex-start">
-            <div class="address">
-                <a class="logo" lang="en" href="./index.html">
-                    <span class="logo__first-part">Web</span><span class="logo__second-part--inverse">Studio</span>
-                </a>
-                <address class="address__text">
-                    <p>г. Киев, пр-т Леси Украинки, 26</p>
-                    <ul>
-                        <li><a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li><a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-                    </ul>
-                </address>
-            </div>
-            <div class="footer-block footer-block--socialnetworks">
-                <p class="footer-block__header">Присоединяйтесь</p>
-                <ul class="socialnetworks">
-                    <li>
-                        <a class="socialnetworks__element socialnetworks__element--inverse" href="">
-                            <svg class="socialnetworks__element__logo">
-                                <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="socialnetworks__element socialnetworks__element--inverse" href="">
-                            <svg class="socialnetworks__element__logo">
-                                <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="socialnetworks__element socialnetworks__element--inverse" href="">
-                            <svg class="socialnetworks__element__logo">
-                                <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="socialnetworks__element socialnetworks__element--inverse" href="">
-                            <svg class="socialnetworks__element__logo">
-                                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
+    <footer class="footer section--darkgray-background "> 
+        <div class="address">
+            <a class="logo" lang="en" href="./index.html">
+                <span class="logo__first-part">Web</span><span class="logo__second-part--inverse">Studio</span>
+            </a>
+            <address class="address__text">
+                <p>г. Киев, пр-т Леси Украинки, 26</p>
+                <ul>
+                    <li><a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li><a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
                 </ul>
-            </div>
-            <div class="footer-block footer-block--subscribe">
-                <p class="footer-block__header">Подпишитесь на рассылку</p>
-                <form class="subscribe-form">
-                    <input class="subscribe-form__input" type="email" name="mail" placeholder="E-mail">
-                    <button class="button" type="submit">Подписаться
-                        <svg class="button__logo">
-                            <use href="./images/symbol-defs.svg#discribe"></use>
+            </address>
+        </div>
+        <div class="footer-block footer-block--socialnetworks">
+            <p class="footer-block__header">Присоединяйтесь</p>
+            <ul class="socialnetworks">
+                <li>
+                    <a class="socialnetworks__element socialnetworks__element--inverse" href="">
+                        <svg class="socialnetworks__element__logo">
+                            <use href="./images/symbol-defs.svg#icon-instagram"></use>
                         </svg>
-                    </button>
-                </form>
+                    </a>
+                </li>
+                <li>
+                    <a class="socialnetworks__element socialnetworks__element--inverse" href="">
+                        <svg class="socialnetworks__element__logo">
+                            <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="socialnetworks__element socialnetworks__element--inverse" href="">
+                        <svg class="socialnetworks__element__logo">
+                            <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="socialnetworks__element socialnetworks__element--inverse" href="">
+                        <svg class="socialnetworks__element__logo">
+                            <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-block footer-block--subscribe">
+            <p class="footer-block__header">Подпишитесь на рассылку</p>
+            <form class="subscribe-form">
+                <input class="subscribe-form__input" type="email" name="mail" placeholder="E-mail">
 
-            </div>
+                <button class="button" type="submit">Подписаться
+                    <svg class="button__logo">
+                        <use href="./images/symbol-defs.svg#discribe"></use>
+                    </svg>
+                </button>
+            </form>
 
         </div>
-
-    </footer>
+</footer> 
+    
+<script src="./js/modal.js"></script>
+<script src="./js/menu-button.js"></script>
 </body>
 
 </html>

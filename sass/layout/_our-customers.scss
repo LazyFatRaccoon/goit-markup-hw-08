@@ -1,25 +1,45 @@
 
 .our-customer {
+
 	display: flex;
-	width: 170px;
-	height: 92px;
-	color: var(--logo-primery-color);
-	border: 1px solid var(--logo-primery-color);
-	border-radius: 4px;
-	transition: border-color var(--animation-time) cubic-bezier(var(--cubic-value)), color var(--animation-time) cubic-bezier(var(--cubic-value));
+	flex-wrap: wrap;
+	margin: -15px;
+	
 
-	&__logo {
-		width: 106px;
-		height: 60px;
-		margin: auto auto;
-		fill:currentColor;
-	}
+	&__element {
+		
+		//flex-direction: row;
+		//flex-wrap: wrap;
+		width: calc((100vw - 2 * 30px) / 2);
+		@media screen and (min-width:768px) {
+			width: calc((100vw - 3 * 30px) / 3);
+		}
+		@media screen and (min-width:1200px) {
+			width: 170px;
+		}
+		//width: 170px;
+		height: 92px;
+		margin: 15px;
 
-	&:hover,
-	&:focus {
-		cursor: pointer;
-		color: var(--supporting-color);
-		border-color: var(--supporting-color);
+		display: flex;
+
+		color: var(--logo-primery-color);
+		border: 1px solid var(--logo-primery-color);
+		border-radius: 4px;
+		transition: border-color var(--animation-time) cubic-bezier(var(--cubic-value)), color var(--animation-time) cubic-bezier(var(--cubic-value));
+
+		&__logo {
+			width: 106px;
+			height: 60px;
+			margin: auto auto;
+			fill: currentColor;
+		}
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			color: var(--supporting-color);
+			border-color: var(--supporting-color);
+		}
 	}
 }
-

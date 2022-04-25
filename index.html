@@ -18,10 +18,24 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <a lang="en" href="./index.html" class="logo">
-                <span class="logo__first-part">Web</span><span class="logo__second-part">Studio</span>
-            </a>
+        
+        <!-- <div class="container"> -->
+           
+                <a lang="en" href="./index.html" class="logo">
+                    <span class="logo__first-part">Web</span><span class="logo__second-part">Studio</span>
+                </a>
+                <button class="menu-button menu-button__open" type="button" data-menu-open>
+                    <svg width="40" height="40">
+                        <use class="menu-button__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            <div class="navigation-container" data-menu>
+                <button class="menu-button menu-button__close" type="button" data-menu-close>
+                    <svg width="40" height="40">
+                        <use class="menu-button__icon-menu-close" href="./images/symbol-defs.svg#icon-menu-close"></use>
+                    </svg>
+                </button>
+            
             <nav>
                 <ul class="navigation">
                     <li> <a href="./index.html" class="navigation__element navigation__element--selected"> Студия </a> </li>
@@ -30,23 +44,39 @@
                 </ul>
             </nav>
             <ul class="contacts">
-                <li><a href="mailto:info@devstudio.com" class="contacts__element">
-                    <svg class="contacts__mail">
-                        <use href="./images/symbol-defs.svg#icon-mail"></use>
-                    </svg>
-                    <p>info@devstudio.com</p></a></li>
-                <li><a href="tel:+380961111111" class="contacts__element">
+                <li><a href="tel:+380961111111" class="contacts__element" data-menu-telephone>
                     <svg class="contacts__tel">
                         <use href="./images/symbol-defs.svg#icon-phone"></use>
                     </svg>
-                    <p>+38 096 111 11 11</p></a></li>
+                    <p>+38 096 111 11 11</p>
+                </a></li>
+                <li><a href="mailto:info@devstudio.com" class="contacts__element" data-menu-email>
+                        <svg class="contacts__mail">
+                            <use href="./images/symbol-defs.svg#icon-mail"></use>
+                        </svg>
+                        <p>info@devstudio.com</p>
+                    </a></li>
+                
             </ul>
-        </div>
+            <ul class="mobile-menu__social">
+                <li> <a href="#" class="mobile-menu__social__element">Instagram</a> </li>
+                <li> <a href="#" class="mobile-menu__social__element">Twitter</a> </li>
+                <li> <a href="#" class="mobile-menu__social__element">Facebook</a> </li>
+                <li> <a href="#" class="mobile-menu__social__element">LinkedIn</a> </li>
+            </ul>
+            </div>
+                
+          
+        <!-- </div> -->
     </header>
     <main>
+        <!-- ******************************** HERO ******************************** -->
         <section class="section--darkgray-background section--hero-background-img section--hero-paddings">
-            <h1 class="section__header">ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-            <button class="button" data-modal-open>Заказать услугу</button>
+            <div class="hero-content-container">
+                <h1 class="section__header">ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
+                <button class="button" data-modal-open>Заказать услугу</button>
+            </div>      
+            
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal" >
                     <button class="modal-close-btn" data-modal-close>
@@ -101,10 +131,11 @@
                     </form>
                 </div>
             </div>
-        </section>
-        <section class="section section--without-padding-bottom">
+        </section> 
+        <!-- ******************************** OUR SKILLS ******************************** -->
+        <section class="section section--with-list">
             <h2 class="visually-hidden">Наши особенности</h2>
-            <ul class="list container">
+            <ul class="skill-card-container">
                 <li class="skill-card">
                     <div class="skill-card__logo-container">
                         <svg class="skill-card__logo-container__logo">
@@ -147,34 +178,60 @@
                 </li>
             </ul>
         </section>
-        <section class="section">
+        <!-- ******************************** WHAT WE DO ******************************** -->
+        <section class="section section--what-we-do">
             <h2 class="section__name">Чем мы занимаемся</h2>
-            <ul class="list container">
+            <ul class="image-card-container"> 
                 <li class="image-card"> 
-                    <img class="image-card__img" src='./images/image1.jpg' alt="процесс кодинга" width="370">
+                    <picture>
+                        <source srcset="./images/what-we-do/what-we-do_card1_x1.webp 1x, ./images/what-we-do/what-we-do_card1_x2.webp 1x 2x" type="image/webp"/>
+                        <source srcset="./images/what-we-do/what-we-do_card1_x1.jpg 1x, ./images/what-we-do/what-we-do_card1_x2.jpg 2x,"/>
+                        <img class="image-card__img" src='./images/what-we-do/what-we-do_card1_x1.jpg' alt="процесс кодинга"  />
+                    </picture>
+                    <!-- <img class="image-card__img" src='./images/image1.jpg' alt="процесс кодинга" width="370"> -->
                     <div class="image-card__label-wrapper">
                         <p class="image-card__label-wrapper__label">Десктопные приложения</p>
                     </div>
                 </li>
-                <li class="image-card"> 
-                    <img class="image-card__img" src='./images/image2.jpg' alt="разработка макета" width="370">
+                <li class="image-card">
+                    <picture>
+                        <source srcset="./images/what-we-do/what-we-do_card2_x1.webp 1x, ./images/what-we-do/what-we-do_card2_x2.webp 1x 2x" type="image/webp"/>
+                        <source srcset="./images/what-we-do/what-we-do_card2_x1.jpg 1x, ./images/what-we-do/what-we-do_card2_x2.jpg 2x,"/>
+                        <img class="image-card__img" src='./images/what-we-do/what-we-do_card2_x1.jpg' alt="разработка макета"  />
+                    </picture> 
+                    <!-- <img class="image-card__img" src='./images/image2.jpg' alt="разработка макета" width="370"> -->
                     <div class="image-card__label-wrapper">
                         <p class="image-card__label-wrapper__label">Мобильные приложения</p>
                     </div>
                 </li>
-                <li class="image-card"> 
-                    <img class="image-card__img" src='./images/image3.jpg' alt="выбор цветовой палитры" width="370">
+                <li class="image-card">
+                    <picture>
+                        <source srcset="./images/what-we-do/what-we-do_card3_x1.webp 1x, ./images/what-we-do/what-we-do_card3_x2.webp 1x 2x" type="image/webp"/>
+                        <source srcset="./images/what-we-do/what-we-do_card3_x1.jpg 1x, ./images/what-we-do/what-we-do_card3_x2.jpg 2x,"/>
+                        <img class="image-card__img" src='./images/what-we-do/what-we-do_card3_x1.jpg' alt="выбор цветовой палитры"  />
+                    </picture> 
+                    <!-- <img class="image-card__img" src='./images/image3.jpg' alt="выбор цветовой палитры" width="370"> -->
                     <div class="image-card__label-wrapper">
                         <p class="image-card__label-wrapper__label">Дизайнерские решения</p>
                     </div>
                 </li>
             </ul>
-        </section>
+        </section> 
+        <!-- ******************************** OUR TEAM ******************************** -->
         <section class="section section--gray-background">
             <h2 class="section__name">Наша команда</h2>
-            <ul class="list container">
+            <ul class="our-team-card-container">
                 <li class="our-team-card">
-                    <img class="our-team-card__img" src='./images/employee1.jpg' alt="Игорь Демьяненко" width="270" />
+                    <picture>
+                        <source srcset="./images/our_team/card_1/our_team_desktop_x1.webp 1x, ./images/our_team/card_1/our_team_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_1/our_team_desktop_x1.jpg 1x, ./images/our_team/card_1/our_team_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                        <source srcset="./images/our_team/card_1/our_team_tablet_x1.webp 1x, ./images/our_team/card_1/our_team_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_1/our_team_tablet_x1.jpg 1x, ./images/our_team/card_1/our_team_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/our_team/card_1/our_team_mobile_x1.webp 1x, ./images/our_team/card_1/our_team_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_1/our_team_mobile_x1.jpg 1x, ./images/our_team/card_1/our_team_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                        <img class="our-team-card__img" src='./images/our_team/card_1/our_team_mobile_x1.jpg' alt="Игорь Демьяненко"  />
+                    </picture>
+                    
                     <h3 class="our-team-card__name">Игорь Демьяненко</h3>
                     <p class="our-team-card__job">Product Designer</p>
                     <ul class="socialnetworks socialnetworks--our-team-padding">
@@ -209,7 +266,15 @@
                     </ul>
                 </li>
                 <li class="our-team-card">
-                    <img class="our-team-card__img" src='./images/employee2.jpg' alt="Ольга Репина" width="270" />
+                    <picture>
+                        <source srcset="./images/our_team/card_2/our_team_desktop_x1.webp 1x, ./images/our_team/card_2/our_team_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_2/our_team_desktop_x1.jpg 1x, ./images/our_team/card_2/our_team_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                        <source srcset="./images/our_team/card_2/our_team_tablet_x1.webp 1x, ./images/our_team/card_2/our_team_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_2/our_team_tablet_x1.jpg 1x, ./images/our_team/card_2/our_team_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/our_team/card_2/our_team_mobile_x1.webp 1x, ./images/our_team/card_2/our_team_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_2/our_team_mobile_x1.jpg 1x, ./images/our_team/card_2/our_team_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                        <img class="our-team-card__img" src='./images/our_team/card_2/our_team_mobile_x1.jpg' alt="Ольга Репина"  />
+                    </picture>
                     <h3 class="our-team-card__name">Ольга Репина</h3>
                     <p class="our-team-card__job">Frontend Developer</p>
                     <ul class="socialnetworks socialnetworks--our-team-padding">
@@ -244,7 +309,15 @@
                     </ul>
                 </li>
                 <li class="our-team-card">
-                    <img class="our-team-card__img" src='./images/employee3.jpg' alt="Николай Тарасов" width="270" />
+                    <picture>
+                        <source srcset="./images/our_team/card_3/our_team_desktop_x1.webp 1x, ./images/our_team/card_3/our_team_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_3/our_team_desktop_x1.jpg 1x, ./images/our_team/card_3/our_team_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                        <source srcset="./images/our_team/card_3/our_team_tablet_x1.webp 1x, ./images/our_team/card_3/our_team_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_3/our_team_tablet_x1.jpg 1x, ./images/our_team/card_3/our_team_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/our_team/card_3/our_team_mobile_x1.webp 1x, ./images/our_team/card_3/our_team_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_3/our_team_mobile_x1.jpg 1x, ./images/our_team/card_3/our_team_mobile_x2.jpg 2x" media="(min-width: 320px)" />
+                        <img class="our-team-card__img" src='./images/our_team/card_3/our_team_mobile_x1.jpg' alt="Николай Тарасов"  />
+                    </picture>
                     <h3 class="our-team-card__name">Николай Тарасов</h3>
                     <p class="our-team-card__job">Marketing</p>
                     <ul class="socialnetworks socialnetworks--our-team-padding">
@@ -279,7 +352,15 @@
                     </ul>
                 </li>
                 <li class="our-team-card">
-                    <img class="our-team-card__img" src='./images/employee4.jpg' alt="Михаил Ермаков" width="270" />
+                    <picture>
+                        <source srcset="./images/our_team/card_4/our_team_desktop_x1.webp 1x, ./images/our_team/card_4/our_team_desktop_x2.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_4/our_team_desktop_x1.jpg 1x, ./images/our_team/card_4/our_team_desktop_x2.jpg 2x" media="(min-width: 1200px)"/>
+                        <source srcset="./images/our_team/card_4/our_team_tablet_x1.webp 1x, ./images/our_team/card_4/our_team_tablet_x2.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_4/our_team_tablet_x1.jpg 1x, ./images/our_team/card_4/our_team_tablet_x2.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/our_team/card_4/our_team_mobile_x1.webp 1x, ./images/our_team/card_4/our_team_mobile_x2.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                        <source srcset="./images/our_team/card_4/our_team_mobile_x1.jpg 1x, ./images/our_team/card_4/our_team_mobile_x2.jpg 2x" media="(min-width: 320px)"/>
+                        <img class="our-team-card__img" src='./images/our_team/card_4/our_team_mobile_x1.jpg' alt="Михаил Ермаков"  />
+                    </picture>
                     <h3 class="our-team-card__name">Михаил Ермаков</h3>
                     <p class="our-team-card__job">UI Designer</p>
                     <ul class="socialnetworks socialnetworks--our-team-padding">
@@ -315,58 +396,58 @@
                 </li>
             </ul>
         </section>
-        <section class="section">
+        <section class="section"> 
             <h2 class="section__name">Постоянные клиенты</h2>
-            <ul class="container">
+            <ul class="our-customer ">
                 <li>
-                    <a class="our-customer" href="">
-                        <svg class="our-customer__logo">
+                    <a class="our-customer__element" href="">
+                        <svg class="our-customer__element__logo">
                             <use href="./images/symbol-defs.svg#icon-client1"></use>                        
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a class="our-customer" href="">
-                        <svg class="our-customer__logo">
+                    <a class="our-customer__element" href="">
+                        <svg class="our-customer__element__logo">
                             <use href="./images/symbol-defs.svg#icon-client2"></use>                        
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a class="our-customer" href="">
-                        <svg class="our-customer__logo">
+                    <a class="our-customer__element" href="">
+                        <svg class="our-customer__element__logo">
                             <use href="./images/symbol-defs.svg#icon-client3"></use>                        
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a class="our-customer" href="">
-                        <svg class="our-customer__logo">
+                    <a class="our-customer__element" href="">
+                        <svg class="our-customer__element__logo">
                             <use href="./images/symbol-defs.svg#icon-client4"></use>                        
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a class="our-customer" href="">
-                        <svg class="our-customer__logo">
+                    <a class="our-customer__element" href="">
+                        <svg class="our-customer__element__logo">
                             <use href="./images/symbol-defs.svg#icon-client5"></use>                        
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a class="our-customer" href="">
-                        <svg class="our-customer__logo">
+                    <a class="our-customer__element" href="">
+                        <svg class="our-customer__element__logo">
                             <use href="./images/symbol-defs.svg#icon-client6"></use>                        
                         </svg>
                     </a>
                 </li>
             </ul>
 
-        </section>
+        </section> 
 
     </main>
-    <footer class="section--darkgray-background section--footer-paddings">
-        <div class="container container--align-items-flex-start">
+    <!-- ******************************** FOOTER ******************************** -->
+    <footer class="footer section--darkgray-background "> 
             <div class="address">
                 <a class="logo" lang="en" href="./index.html">
                     <span class="logo__first-part">Web</span><span class="logo__second-part--inverse">Studio</span>
@@ -416,6 +497,7 @@
                 <p class="footer-block__header">Подпишитесь на рассылку</p>
                 <form class="subscribe-form">
                     <input class="subscribe-form__input" type="email" name="mail" placeholder="E-mail">
+
                     <button class="button" type="submit">Подписаться
                         <svg class="button__logo">
                             <use href="./images/symbol-defs.svg#discribe"></use>
@@ -424,11 +506,10 @@
                 </form>
 
             </div>
+    </footer> 
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu-button.js"></script>
 
-        </div>
-
-    </footer>
-    <script src="./modal.js"></script>
 </body>
 
 </html>

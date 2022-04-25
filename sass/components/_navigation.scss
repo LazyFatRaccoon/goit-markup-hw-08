@@ -1,16 +1,42 @@
-.navigation {
-    display: flex;
-	margin-left: 92px;
-    padding: 32px 0px;
-    gap: 50px;
 
+
+
+
+
+.navigation {
+  
+    @media screen and (min-width: 768px) {
+        display: flex;
+	    margin-left: 88px;
+        padding: 0px 0px;
+        gap: 50px;
+    }
+    @media screen and (min-width: 1200px) {
+	    margin-left: 93px;
+    }
+
+    li {
+        margin-bottom: 32px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0px;
+        }
+    }
     &__element {
-        padding: 32px 0px;
-        color: inherit;
+        
+        
+        color: var(--main-text-color);
         position: relative;
         font-weight: 500;
-	    letter-spacing: 0.02em;
+	    letter-spacing: 2%;
+        font-size: 40px;
+        line-height: 1.172;
 	    transition: color var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1), fill var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
+        @media screen and (min-width: 768px) {
+            padding: 32px 0px;
+            font-size: 14px;
+            z-index: 1;
+        }
+
         
         &:focus,
         &:hover {
@@ -21,7 +47,10 @@
         &--selected::after{
             position: absolute;
 	        content: "";
-	        display: block;
+	        display: none;
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
 	        width: 100%;
 	        height: 4px;
 	        border-radius: 2px;
@@ -30,6 +59,7 @@
         }       
     }
 }
+
 
 
 

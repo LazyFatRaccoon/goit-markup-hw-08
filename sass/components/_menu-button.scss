@@ -1,0 +1,29 @@
+.menu-button {
+
+    
+    position:absolute;
+    top: 10px;
+    right: 15px;
+
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: 768px){
+        display: none   ;
+    }
+
+    &__icon-menu-close {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .navigation-container.is-open   &__icon-menu{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+}

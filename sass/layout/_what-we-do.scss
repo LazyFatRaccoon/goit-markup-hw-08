@@ -1,7 +1,9 @@
 .image-card-container {
 	display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
+    gap: 30px;
+    flex-wrap: wrap;
+	width: 1170px;
+	margin: 0 auto;
 }
 .image-card {
 	position: relative;

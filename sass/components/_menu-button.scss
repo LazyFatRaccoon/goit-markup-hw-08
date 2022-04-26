@@ -1,29 +1,41 @@
 .menu-button {
-
-    
-    position:absolute;
-    top: 10px;
-    right: 15px;
+    //position:absolute;
+    //top: -50%;
+    //right: 0px;
 
     display: inline-flex;
-    margin: 0;
     padding: 0;
+    margin: auto 0;
     border: none;
     background-color: transparent;
+    align-self:end;
+    z-index: 1000;
+    // @media screen and (min-width: 480px){
+       
+    // right: calc(30px + (100% - 480px) * 0.5);
+
+
+    // }
 
     @media screen and (min-width: 768px){
         display: none   ;
     }
 
     &__icon-menu-close {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+        display: none;
+        // opacity: 0;
+        // visibility: hidden;
+        // pointer-events: none;
     }
-    .navigation-container.is-open   &__icon-menu{
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+    .is-open   &__icon-menu-close{
+        display: block;
+    }
+    .is-open   &__icon-menu{
+        display: none;
+    }
+    
+    &.go-away {
+        display: none;
     }
 
 }

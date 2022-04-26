@@ -12,6 +12,8 @@
   
     function toggleModal() {
       refs.menu.classList.toggle('is-open');
+      refs.openMenuBtn.classList.toggle('is-open');
+
       refs.telephone.classList.toggle('contacts__element--mobile-telephone');
       refs.email.classList.toggle('contacts__element--mobile-email');
     }

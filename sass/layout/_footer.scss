@@ -19,7 +19,7 @@
 
 	@media screen and (min-width: 768px) {
 		display: inline-block;
-		margin-right: calc(165px + (100% - 768px) * 0.5);
+		margin-right: 165px;
 	}
 	@media screen and (min-width: 1200px) {
 		//display: flex;

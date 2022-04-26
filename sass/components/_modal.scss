@@ -2,6 +2,7 @@
 	
 	max-width: 450px;
 	max-height: 609px;
+	
 
 	@media screen and (min-width:1200px) {
 		min-width: 528px;
@@ -16,6 +17,8 @@
 	opacity: 1;
 	transform:  scale(1);
 	transition: opacity 1250ms cubic-bezier(var(--cubic-value)), transform 1250ms cubic-bezier(var(--cubic-value));
+
+	
 }
 
 .is-hidden .modal{

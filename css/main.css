@@ -379,8 +379,6 @@ main {
   opacity: 1;
   transform: scale(1);
   transition: opacity 1250ms cubic-bezier(var(--cubic-value)), transform 1250ms cubic-bezier(var(--cubic-value));
-  position: relative;
-  z-index: 2000;
 }
 @media screen and (min-width: 1200px) {
   .modal {

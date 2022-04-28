@@ -1,10 +1,14 @@
 .header {
 	//
-	margin: auto auto;
+	@media screen and (max-width: 479px) {
+
+		margin: auto 15px;
+		
+	}
 	
 	@media screen and (min-width: 480px) {
 
-		
+		margin: auto auto;
 		width: 450px;
 		
 	}

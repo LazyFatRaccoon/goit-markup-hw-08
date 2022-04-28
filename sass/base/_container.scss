@@ -1,31 +1,8 @@
 .container {
-	//display: flex;
-	//position: absolute;
-	//width: 480px;
-	padding: 16px 15px;
+	
+
 	margin: 0 auto;
 
-	@media screen and (min-width: 768px) {
-		padding: 26px 15px;	
-	}
-
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	
-	&--align-items-flex-start {
-		align-items: flex-start;
-	}
-
-	&--for-filter-btns {
-
-
-		display: flex;
-		justify-content: center;
-		
-		gap: 8px;
-		margin: 0 auto;
-		margin-bottom: 40px;
 	@media screen and (min-width:480px) {
         width: 480px;  
     }
@@ -36,7 +13,75 @@
        width: 1200px;  
     }
 
+	&--footer {
 
+		padding: 60px 0;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+
+		@media screen and (min-width: 768px) {
+			width: 738px;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items:baseline;
+	}
+		@media screen and (min-width: 1200px) {
+			width: 1170px; 
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			//gap: 70px;
+			//align-items:baseline;
+	}
+
+	}
+	//display: flex;
+	//position: absolute;
+	//width: 480px;
+	// padding: 16px 15px;
+	// margin: 0 auto;
+
+	// @media screen and (min-width: 768px) {
+	// 	padding: 26px 15px;	
+	// }
+
+	// align-items: center;
+	// justify-content: space-between;
+	// flex-wrap: wrap;
+	
+	// &--align-items-flex-start {
+	// 	align-items: flex-start;
+	// }
+
+	&--for-filter-btns {
+	
+	
+		display: inline-flex;
+		justify-content: start;
+		flex-wrap: wrap;
+	
+		gap: 8px;
+		margin: 0px 15px 40px 15px;
+	
+		@media screen and (min-width:480px) {
+			width: 450px;
+			margin-bottom: 40px;
+		}
+	
+		@media screen and (min-width:768px) {
+			width: 738px;
+			margin-bottom: 30px;
+			justify-content: center;
+		}
+	
+		@media screen and (min-width:1200px) {
+			width: 1170px;
+			margin-bottom: 50px;
+		}
+	
+	
 	}
 
 

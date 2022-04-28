@@ -23,6 +23,7 @@
             font-size: 36px;
             margin-bottom: 50px;
         }
+
         
     }
 
@@ -56,24 +57,25 @@
         // background-position: center;
         // background-size: cover;
         // background-repeat: no-repeat;
+        display: flex;
         margin: 0 auto;
         
-        @media screen and (min-width:480px) {
-            width: 480px;  
-        }
-        @media screen and (min-width:768px) {
-            width: 768px;    
-        }
-        @media screen and (min-width:1200px) {
-           width: 1200px;  
-        }
+        // @media screen and (min-width:480px) {
+        //     width: 480px;  
+        // }
+        // @media screen and (min-width:768px) {
+        //     width: 768px;    
+        // }
+        // @media screen and (min-width:1200px) {
+        //    width: 1200px;  
+        // }
         
         
             @media screen and (min-width:1200px) {
                 background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero/hero_desktop_x1.jpg');
                 height: 600px;
                 background-position: center;
-                background-size: cover;
+                background-size:cover;
                 background-repeat: no-repeat;
                 
         
@@ -106,7 +108,7 @@
                 background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero/hero_desktop_x2.jpg');
                 height: 600px;
                 background-position: center;
-                background-size: cover;
+                background-size:cover;
                 background-repeat: no-repeat;
             }
         
@@ -137,9 +139,9 @@
 
     
 
-   &--hero-paddings {
-    display: flex;
-     }
+//    &--hero-paddings {
+//     display: flex;
+//      }
 
     &--with-list  {
         padding-bottom: 60; 
